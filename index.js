@@ -87,7 +87,7 @@ async function run() {
       res.send(completeTask);
     });
 
-    //Make taskStatus Complete to Not Complete
+    //.Update complete Task and Taskdetails Component to Make taskStatus Complete to Not Completed
     app.put("/complete-task/:id", async (req, res) => {
       const id = req.params.id;
       const filter = { _id: ObjectId(id) };
@@ -105,7 +105,7 @@ async function run() {
       res.send(result);
     });
 
-    //Update Mytask Component Completed button Completed Status to Not Completed Status
+    //Update Mytask and TaskDetails Component button Not Completed Status to Completed Status
     app.put("/mytask/:id", async (req, res) => {
       const id = req.params.id;
       console.log(id);
